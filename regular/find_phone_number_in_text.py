@@ -1,4 +1,4 @@
-import re
+import re, pyperclip
 
 
 def get_number_phone_in_text(text: str):
@@ -59,6 +59,13 @@ def class_regular(text: str):
     result = cl.findall(text)
     print(result)
 
+def test():
+    a = str(pyperclip.paste())
+    print(a)
+    pyperclip.copy(a.upper())
+
+
+
 if __name__ == '__main__':
     # get_number_phone_in_text(
     #     '''Позвони мне завтра по номеру 415-555-1011. 415-555-9999 - это номер телефона моего офиса.''')
@@ -72,4 +79,5 @@ if __name__ == '__main__':
     # find_wirh_pipe_more_3('Моя героиня - Бэтвувувувумен')
     # find_wirh_pipe_more_4('Моя героиня - Бэтвувувувумен')
     # find_wirh_pipe_more_4('Мой герой - Бэтмен')
-    class_regular('asdfkkjdfg[awsdjdsc')
+    # class_regular('asdfkkjdfg[awsdjdsc')
+    test()
