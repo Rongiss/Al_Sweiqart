@@ -64,6 +64,12 @@ def test():
     print(a)
     pyperclip.copy(a.upper())
 
+def numbers(text):
+    aa = re.compile(r'(\d[9])')
+    result = aa.search(text)
+    print(result.groups())
+
+
 
 
 if __name__ == '__main__':
@@ -80,4 +86,5 @@ if __name__ == '__main__':
     # find_wirh_pipe_more_4('Моя героиня - Бэтвувувувумен')
     # find_wirh_pipe_more_4('Мой герой - Бэтмен')
     # class_regular('asdfkkjdfg[awsdjdsc')
-    test()
+    # test()
+    numbers('''Позвони мне завтра по номеру 415-555-1011. (415) 555-9999 - это номер телефона моего офиса.''')
