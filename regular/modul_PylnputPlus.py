@@ -2,8 +2,9 @@ import pyinputplus as pyip
 
 
 def test():
+    aa = ['cat', 'dog', 'bird']
     try:
-        a = pyip.inputMenu(['cat', 'dog', 'bird'], numbered=True, timeout=2)
+        a = pyip.inputMenu(aa, numbered=True, timeout=20)
         match a:
             case 'cat':
                 print('cat lal')
