@@ -1,11 +1,14 @@
 # import pathlib
 
 from pathlib import Path
+import os
 
 
 def main():
-    a = Path('spam', 'eggs', 'file')
-    print(a)
+    for i in range(3):
+        print(Path.cwd().parents[i])
+    print(os.listdir(Path.cwd()))
+    print(list(Path.cwd().glob(r'*.py')))
 
 
 if __name__ == '__main__':
