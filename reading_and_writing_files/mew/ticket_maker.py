@@ -40,6 +40,6 @@ for quizNum in range(35):
             quizFile.write(f"\t{'АБВГ'[i]}. {answerOptions[i]}\n")
             # quizFile.write('\n')
             # Запись ключа ответа в файл
-            answerKeyFile.write(f'{questionNum + 1}.{'АБВГ'[answerOptions.index(correctAnswer)]}\n')
+            answerKeyFile.write(f'{questionNum + 1}.{'  АБВГ'[answerOptions.index(correctAnswer)]}\n')
 quizFile.close()
 answerKeyFile.close()
